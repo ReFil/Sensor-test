@@ -76,7 +76,7 @@ void NextPM::begin(HardwareSerial *serial, int8_t rxPin, int8_t txPin)
 }
 #endif
 void NextPM::begin(HardwareSerial *stream) {
-	stream->begin(115200);
+	stream->begin(115200, SERIAL_8E1);
 	npm_data = stream;
 }
 
@@ -85,14 +85,14 @@ int8_t NextPM::get_state()
 {
 	int8_t result = -1;
 	NPM_waiting_for_4 = NPM_REPLY_HEADER_4;
-	Serial.println("State NPM...");
+	//Serial.println("State NPM...");
 	command(PmSensorCmd::State);
 
 	unsigned long timeout = millis();
 
 	do
 	{
-		Serial.println("Wait for Serial...");
+		////Serial.println("Wait for Serial...");
 	} while (!npm_data->available() && millis() - timeout < 3000);
 
 	while (npm_data->available() >= NPM_waiting_for_4)
@@ -123,11 +123,11 @@ int8_t NextPM::get_state()
 			NPM_waiting_for_4 = NPM_REPLY_HEADER_4;
 			if (checksum_valid_4(test))
 			{
-				Serial.println("Checksum OK...");
+				//Serial.println("Checksum OK...");
 			}
 			else
 			{
-				Serial.println("Checksum invalid...");
+				//Serial.println("Checksum invalid...");
 			}
 			break;
 		}
@@ -139,14 +139,14 @@ bool NextPM::start_stop()
 {
 	bool result;
 	NPM_waiting_for_4 = NPM_REPLY_HEADER_4;
-	Serial.println("Switch start/stop NPM...");
+	//Serial.println("Switch start/stop NPM...");
 	command(PmSensorCmd::Change);
 
 	unsigned long timeout = millis();
 
 	do
 	{
-		Serial.println("Wait for Serial...");
+		//Serial.println("Wait for Serial...");
 	} while (!npm_data->available() && millis() - timeout < 3000);
 
 	while (npm_data->available() >= NPM_waiting_for_4)
@@ -168,12 +168,12 @@ bool NextPM::start_stop()
 
 			if (bitRead(state[0], 0) == 0)
 			{
-				Serial.println("NPM start...");
+				//Serial.println("NPM start...");
 				result = true;
 			}
 			else if (bitRead(state[0], 0) == 1)
 			{
-				Serial.println("NPM stop...");
+				//Serial.println("NPM stop...");
 				result = false;
 			}
 
@@ -188,7 +188,7 @@ bool NextPM::start_stop()
 			NPM_waiting_for_4 = NPM_REPLY_HEADER_4;
 			if (checksum_valid_4(test))
 			{
-				Serial.println("Checksum OK...");
+				//Serial.println("Checksum OK...");
 			}
 			break;
 		}
@@ -201,14 +201,14 @@ String NextPM::version_date()
 	uint16_t NPMversion;
 	delay(250);
 	NPM_waiting_for_6 = NPM_REPLY_HEADER_6;
-	Serial.println("Version NPM...");
+	//Serial.println("Version NPM...");
 	command(PmSensorCmd::Version);
 
 	unsigned long timeout = millis();
 
 	do
 	{
-		Serial.println("Wait for Serial...");
+		//Serial.println("Wait for Serial...");
 	} while (!npm_data->available() && millis() - timeout < 3000);
 
 	while (npm_data->available() >= NPM_waiting_for_6)
@@ -248,14 +248,14 @@ String NextPM::version_date()
 			NPM_waiting_for_6 = NPM_REPLY_HEADER_6;
 			if (checksum_valid_6(test))
 			{
-				Serial.println("Checksum OK...");
-				Serial.print("Next PM Firmware: ");
-				Serial.println(NPMversion);
+				//Serial.println("Checksum OK...");
+				//Serial.print("Next PM Firmware: ");
+				//Serial.println(NPMversion);
 				return String(NPMversion);
 			}
 			else
 			{
-				Serial.println("Checksum invalid...");
+				//Serial.println("Checksum invalid...");
 				return String("Error");
 			}
 			break;
@@ -267,14 +267,14 @@ void NextPM::fan_speed()
 {
 
 	NPM_waiting_for_5 = NPM_REPLY_HEADER_5;
-	Serial.println("Set fan speed to 50 %...");
+	//Serial.println("Set fan speed to 50 %...");
 	command(PmSensorCmd::Speed50);
 
 	unsigned long timeout = millis();
 
 	do
 	{
-		Serial.println("Wait for Serial...");
+		//Serial.println("Wait for Serial...");
 	} while (!npm_data->available() && millis() - timeout < 3000);
 
 	while (npm_data->available() >= NPM_waiting_for_5)
@@ -313,7 +313,7 @@ void NextPM::fan_speed()
 			NPM_waiting_for_5 = NPM_REPLY_HEADER_5;
 			if (checksum_valid_5(test))
 			{
-				Serial.println("Checksum OK...");
+				//Serial.println("Checksum OK...");
 			}
 			break;
 		}
@@ -324,14 +324,14 @@ void NextPM::fetchDataTH(NextPM_dataTH &datain)
 {
 	NPM_waiting_for_8 = NPM_REPLY_HEADER_8;
 
-	Serial.println("Temperature/Humidity in Next PM...");
+	//Serial.println("Temperature/Humidity in Next PM...");
 	command(PmSensorCmd::Temphumi);
 
 	unsigned long timeout = millis();
 
 	do
 	{
-		Serial.println("Wait for Serial...");
+		////Serial.println("Wait for Serial...");
 	} while (!npm_data->available() && millis() - timeout < 3000);
 
 	while (npm_data->available() >= NPM_waiting_for_8)
@@ -373,18 +373,18 @@ void NextPM::fetchDataTH(NextPM_dataTH &datain)
 			data_reader(test, 8);
 			if (checksum_valid_8(test))
 			{
-				Serial.println("Checksum OK...");
-				Serial.print("Temperature (°C): ");
-				Serial.println(String(NPM_temp / 100.0f));
-				Serial.print("Relative humidity (%): ");
-				Serial.println(String(NPM_humi / 100.0f));
+				//Serial.println("Checksum OK...");
+				//Serial.print("Temperature (°C): ");
+				//Serial.println(String(NPM_temp / 100.0f));
+				//Serial.print("Relative humidity (%): ");
+				//Serial.println(String(NPM_humi / 100.0f));
 
 				datain.temp = float(NPM_temp) / 100.0f;
 				datain.humi = float(NPM_humi) / 100.0f;
 			}
 			else
 			{
-				Serial.println("Checksum invalid...");
+				//Serial.println("Checksum invalid...");
 				datain.temp = -1.0;
 				datain.humi = -1.0;
 			}
@@ -402,15 +402,15 @@ void NextPM::fetchDataPM(NextPM_dataPM &datain, int sel)
 	switch (sel)
 	{
 	case 10:
-		Serial.println("Concentration NPM 10s...");
+		//Serial.println("Concentration NPM 10s...");
 		command(PmSensorCmd::Concentration10s);
 		break;
 	case 60:
-		Serial.println("Concentration NPM 60s...");
+		//Serial.println("Concentration NPM 60s...");
 		command(PmSensorCmd::Concentration60s);
 		break;
 	case 900:
-		Serial.println("Concentration NPM 900s...");
+		//Serial.println("Concentration NPM 900s...");
 		command(PmSensorCmd::Concentration900s);
 		break;
 	}
@@ -419,7 +419,7 @@ void NextPM::fetchDataPM(NextPM_dataPM &datain, int sel)
 
 	do
 	{
-		Serial.println("Wait for Serial...");
+		////Serial.println("Wait for Serial...");
 	} while (!npm_data->available() && millis() - timeout < 3000);
 
 	while (npm_data->available() >= NPM_waiting_for_16)
@@ -448,8 +448,8 @@ void NextPM::fetchDataPM(NextPM_dataPM &datain, int sel)
 			break;
 		case NPM_REPLY_STATE_16:
 			npm_data->readBytes(state, sizeof(state));
-			Serial.print("Current state: ");
-			Serial.println(state_npm(state[0]));
+			//Serial.print("Current state: ");
+			//Serial.println(state_npm(state[0]));
 			NPM_waiting_for_16 = NPM_REPLY_BODY_16;
 			break;
 		case NPM_REPLY_BODY_16:
@@ -494,21 +494,21 @@ void NextPM::fetchDataPM(NextPM_dataPM &datain, int sel)
 			data_reader(test, 16);
 			if (checksum_valid_16(test))
 			{
-				Serial.println("Checksum OK...");
+				//Serial.println("Checksum OK...");
 
-				Serial.print("PM1 (μg/m3) : ");
-				Serial.println(String(pm1_serial / 10.0f));
-				Serial.print("PM2.5 (μg/m3): ");
-				Serial.println(String(pm25_serial / 10.0f));
-				Serial.print("PM10 (μg/m3) : ");
-				Serial.println(String(pm10_serial / 10.0f));
+				//Serial.print("PM1 (μg/m3) : ");
+				//Serial.println(String(pm1_serial / 10.0f));
+				//Serial.print("PM2.5 (μg/m3): ");
+				//Serial.println(String(pm25_serial / 10.0f));
+				//Serial.print("PM10 (μg/m3) : ");
+				//Serial.println(String(pm10_serial / 10.0f));
 
-				Serial.print("PM1 (pcs/L) : ");
-				Serial.println(String(N1_serial));
-				Serial.print("PM2.5 (pcs/L): ");
-				Serial.println(String(N25_serial));
-				Serial.print("PM10 (pcs/L) : ");
-				Serial.println(String(N10_serial));
+				//Serial.print("PM1 (pcs/L) : ");
+				//Serial.println(String(N1_serial));
+				//Serial.print("PM2.5 (pcs/L): ");
+				//Serial.println(String(N25_serial));
+				//Serial.print("PM10 (pcs/L) : ");
+				//Serial.println(String(N10_serial));
 
 				datain.PM1 = float(pm1_serial) / 10.0f;
 				datain.PM2_5 = float(pm25_serial) / 10.0f;
@@ -520,7 +520,7 @@ void NextPM::fetchDataPM(NextPM_dataPM &datain, int sel)
 			}
 			else
 			{
-				Serial.println("Checksum invalid...");
+				//Serial.println("Checksum invalid...");
 				datain.PM1 = -1.0;
 				datain.PM2_5 = -1.0;
 				datain.PM10 = -1.0;
@@ -555,7 +555,7 @@ void NextPM::powerOnTest(NextPM_test &datain)
 	test_state = get_state();
 	if (test_state == -1)
 	{
-		Serial.println("NPM not connected");
+		//Serial.println("NPM not connected");
 		datain.connected = false;
 	}
 	else
@@ -575,7 +575,7 @@ void NextPM::powerOnTest(NextPM_test &datain)
 		}
 		else if (test_state == 0x01 && bitRead(test_state, 1) == 0)
 		{
-			Serial.println("NPM is stopped..."); // to read the firmware version
+			//Serial.println("NPM is stopped..."); // to read the firmware version
 			datain.sleep = true;
 			datain.degraded = false;
 			datain.default_state = false;
@@ -584,45 +584,45 @@ void NextPM::powerOnTest(NextPM_test &datain)
 		{
 			if (bitRead(test_state, 1) == 1)
 			{
-				Serial.println("Degraded state");
+				//Serial.println("Degraded state");
 				datain.degraded = true;
 				datain.default_state = false;
 			}
 			else
 			{
-				Serial.println("Default state");
+				//Serial.println("Default state");
 				datain.sleep = true;
 				datain.degraded = false;
 				datain.default_state = true;
 			}
 			if (bitRead(test_state, 2) == 1)
 			{
-				Serial.println("Not ready");
+				//Serial.println("Not ready");
 				datain.notready = true;
 			}
 			if (bitRead(test_state, 3) == 1)
 			{
-				Serial.println("Heat error");
+				//Serial.println("Heat error");
 				datain.heat_error = true;
 			}
 			if (bitRead(test_state, 4) == 1)
 			{
-				Serial.println("T/RH error");
+				//Serial.println("T/RH error");
 				datain.TH_error = true;
 			}
 			if (bitRead(test_state, 5) == 1)
 			{
-				Serial.println("Fan error");
+				//Serial.println("Fan error");
 				datain.fan_error = true;
 			}
 			if (bitRead(test_state, 6) == 1)
 			{
-				Serial.println("Memory error");
+				//Serial.println("Memory error");
 				datain.memory_error = true;
 			}
 			if (bitRead(test_state, 7) == 1)
 			{
-				Serial.println("Laser error");
+				//Serial.println("Laser error");
 				datain.laser_error = true;
 			}
 		}
@@ -767,7 +767,7 @@ void NextPM::data_reader(uint8_t data[], size_t size)
 			reader += ", ";
 		}
 	}
-	Serial.println(reader);
+	//Serial.println(reader);
 }
 
 String NextPM::state_npm(uint8_t bytedata)
@@ -778,6 +778,6 @@ String NextPM::state_npm(uint8_t bytedata)
 	{
 		state += String(bitRead(bytedata, b));
 	}
-	Serial.println(state);
+	//Serial.println(state);
 	return state;
 }
