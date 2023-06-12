@@ -2,7 +2,7 @@
 #include <SD.h>
 #include <TimeLib.h>
 #include <Wire.h>
-#define FIDAS
+//#define FIDAS
 #define SENSPS30
 #define SEN55
 #define HPMA115
