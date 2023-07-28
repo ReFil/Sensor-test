@@ -3,11 +3,11 @@
 #include <TimeLib.h>
 #include <Wire.h>
 //#define FIDAS
-#define SENSPS30
+//#define SENSPS30
 #define SEN55
-#define HPMA115
-#define NEXTPM
-#define SDS011
+//#define HPMA115
+//#define NEXTPM
+//#define SDS011
 
 #ifdef FIDAS
 #include "FIDAS200.h"
@@ -219,6 +219,8 @@ void loop() {
         Serial.println(sen55errorMessage);
     }
     Serial.println("SEN55 PM2.5: " + String(sen55massConcentrationPm2p5));
+    Serial.println("SEN55 Teemp: " + String(sen55ambientTemperature));
+    Serial.println("SEN55 RH: " + String(sen55ambientHumidity));
   #endif
   #ifdef HPMA115
     //Read HPMA115
