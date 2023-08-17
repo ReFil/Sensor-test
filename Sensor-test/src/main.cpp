@@ -2,7 +2,7 @@
 #include <SD.h>
 #include <TimeLib.h>
 #include <Wire.h>
-//#define FIDAS
+#define FIDAS
 #define SEN55
 #define SDS011
 
@@ -140,8 +140,8 @@ void loop() {
   while(true) {
   #ifdef FIDAS
     //Read FIDAS
-    fidas200.retrieveValue(PM25);
-    fidasPM25 = fidas200.getValue(PM25);
+    fidas200.retrieveValue(PM25_1S_AVG);
+    fidasPM25 = fidas200.getValue(PM25_1S_AVG);
     Serial.println("Fidas 200 PM2.5: " + String(fidasPM25));
   #endif
 
@@ -197,9 +197,9 @@ void loop() {
     #endif
 
     #ifdef SDS011
-    dataFile.print(String(sds1pm.pm25));
-    dataFile.print(String(sds2pm.pm25));
-    dataFile.print(String(sds3pm.pm25));
+    dataFile.print(String(sds1pm.pm25) + ", ");
+    dataFile.print(String(sds2pm.pm25) + ", ");
+    dataFile.print(String(sds3pm.pm25) + ", ");
     dataFile.print(String(sds4pm.pm25));
     #else
     dataFile.print("0, ");
