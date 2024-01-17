@@ -4,12 +4,12 @@
 #include <Wire.h>
 #include "FastLED.h"
 
-#define FIDAS
-#define SENSPS30
+//#define FIDAS
+//#define SENSPS30
 #define SEN55
-#define HPMA115
-#define NEXTPM
-#define SDS011
+//#define HPMA115
+//#define NEXTPM
+//#define SDS011
 
 #ifdef FIDAS
 #include "FIDAS200.h"
