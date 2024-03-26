@@ -5,9 +5,9 @@
 #include "FastLED.h"
 
 //#define FIDAS
-//#define SENSPS30
-#define SEN55
-//#define HPMA115
+//define SENSPS30
+//#define SEN55
+#define HPMA115
 //#define NEXTPM
 //#define SDS011
 
