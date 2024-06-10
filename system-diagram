@@ -1,0 +1,220 @@
+<mxfile host="app.diagrams.net" modified="2024-06-04T11:54:56.857Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" etag="Wp-kCB16vyBhrMFZpXz8" version="21.1.4" type="device">
+  <diagram name="Page-1" id="6QsJlS9abEumkF-ZzOMj">
+    <mxGraphModel dx="276" dy="146" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cytonu4yILvtf-ElAVZi-1" value="FIDAS 200" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="432.5" y="380" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeColor=#FF0000;exitX=0.066;exitY=0.001;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-2" target="cytonu4yILvtf-ElAVZi-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="420" y="230" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="430" y="220" />
+              <mxPoint x="90" y="220" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.75;entryY=1;entryDx=0;entryDy=0;startArrow=classic;startFill=1;exitX=0.799;exitY=-0.006;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-2" target="cytonu4yILvtf-ElAVZi-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="640.9302325581396" y="200" as="targetPoint" />
+            <mxPoint x="550" y="200" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="540" y="190" />
+              <mxPoint x="710" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-3" value="Nova&lt;br&gt;SDS011" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-4" value="&lt;font style=&quot;font-size: 8px;&quot;&gt;Level Shifter&lt;/font&gt;" style="rounded=0;whiteSpace=wrap;html=1;verticalAlign=middle;spacing=0;spacingBottom=2;" vertex="1" parent="1">
+          <mxGeometry x="482.5" y="330" width="70" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-5" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.708;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-1" target="cytonu4yILvtf-ElAVZi-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="452.5" y="320" as="sourcePoint" />
+            <mxPoint x="502.5" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-7" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-4">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="477.5" y="320" as="sourcePoint" />
+            <mxPoint x="517.5" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-8" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;RS232&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="507.5" y="350" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-9" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;UART&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="507.5" y="300" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-10" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=0;exitDx=0;exitDy=0;fillColor=#f8cecc;strokeColor=#FF0000;entryX=0.285;entryY=1.005;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-1" target="cytonu4yILvtf-ElAVZi-2">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="452.5" y="320" as="sourcePoint" />
+            <mxPoint x="460" y="290" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-11" value="5V" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="412.5" y="320" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-12" value="Sensirion&lt;br&gt;SPS30" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=0.6;entryY=0.001;entryDx=0;entryDy=0;entryPerimeter=0;startArrow=classic;startFill=1;endArrow=none;endFill=0;strokeColor=#FF0000;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-13" target="cytonu4yILvtf-ElAVZi-2">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-13" value="Honeywell&lt;br&gt;HPMA115C0" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="480" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-14" value="Sensirion&lt;br&gt;SEN55" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="60" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-15" value="Tera&lt;br&gt;NextPM" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="80" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-49" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#FF0000;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-16" target="cytonu4yILvtf-ElAVZi-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="305" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-16" value="12V Battery" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="230" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-48" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;strokeColor=#FF0000;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-17" target="cytonu4yILvtf-ElAVZi-18">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="335" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-17" value="12V Battery" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#FF0000;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-18" target="cytonu4yILvtf-ElAVZi-1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-18" value="Victron Energy&lt;br&gt;Inverter" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="260" y="290" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-22" value="12V" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="328" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-24" value="240V" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="310" y="380" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-26" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.133;exitY=-0.005;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-2" target="cytonu4yILvtf-ElAVZi-14">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="110" y="200" as="sourcePoint" />
+            <mxPoint x="160" y="150" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="440" y="210" />
+              <mxPoint x="150" y="210" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-27" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;5V&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="50" y="145" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-30" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;I2C&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="110" y="150" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-31" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.2;exitY=0.005;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeColor=#FF0000;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-2" target="cytonu4yILvtf-ElAVZi-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="170" as="sourcePoint" />
+            <mxPoint x="370" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="450" y="200" />
+              <mxPoint x="230" y="200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-32" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.268;exitY=-0.002;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-2" target="cytonu4yILvtf-ElAVZi-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="310" as="sourcePoint" />
+            <mxPoint x="550" y="260" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="460" y="190" />
+              <mxPoint x="290" y="190" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-33" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.338;exitY=0.001;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;strokeColor=#FF0000;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-2" target="cytonu4yILvtf-ElAVZi-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="190" as="sourcePoint" />
+            <mxPoint x="400" y="140" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="470" y="180" />
+              <mxPoint x="370" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-34" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;exitX=0.4;exitY=-0.003;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-2" target="cytonu4yILvtf-ElAVZi-3">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="390" y="230" as="sourcePoint" />
+            <mxPoint x="440" y="180" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="480" y="170" />
+              <mxPoint x="430" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-37" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;exitX=0.734;exitY=0.004;exitDx=0;exitDy=0;exitPerimeter=0;strokeColor=#FF0000;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-2" target="cytonu4yILvtf-ElAVZi-15">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="220" as="sourcePoint" />
+            <mxPoint x="550" y="170" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="530" y="180" />
+              <mxPoint x="650" y="180" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-38" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;exitX=0.666;exitY=-0.003;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.75;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" source="cytonu4yILvtf-ElAVZi-2" target="cytonu4yILvtf-ElAVZi-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="440" y="210" as="sourcePoint" />
+            <mxPoint x="490" y="160" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="520" y="170" />
+              <mxPoint x="570" y="170" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-40" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;5V&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="145" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-41" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;I2C&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="250" y="150" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-42" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;5V&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="330" y="145" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-43" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;UART&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="384" y="150" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-44" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;5V&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="470" y="145" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-45" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;UART&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="524" y="150" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-46" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;5V&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="610" y="145" width="60" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-47" value="&lt;font style=&quot;font-size: 9px;&quot;&gt;UART&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="664" y="150" width="60" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-2" value="Teensy 4.0" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="230" width="150" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cytonu4yILvtf-ElAVZi-50" value="12V" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="190" y="283" width="60" height="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
