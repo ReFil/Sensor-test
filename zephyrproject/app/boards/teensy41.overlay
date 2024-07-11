@@ -1,0 +1,89 @@
+#include "teensy41-pinctrl.dtsi"
+#include <zephyr/dt-bindings/input/input-event-codes.h>
+#include <zephyr/dt-bindings/lvgl/lvgl.h>
+
+/ {
+    aliases {
+		sw0 = &button0;
+	};
+    
+    chosen {
+		zephyr,display = &ssd1306_ssd1306_128x64_spi;
+        zephyr,console = &cdc_acm_uart;
+	};
+
+    qdec {
+		compatible = "gpio-qdec";
+		gpios = <&gpio1 20 (GPIO_ACTIVE_HIGH|GPIO_PULL_UP)>, <&gpio1 21 (GPIO_ACTIVE_HIGH|GPIO_PULL_UP)>;
+		steps-per-period = <4>;
+		zephyr,axis = <INPUT_REL_WHEEL>;
+		sample-time-us = <2000>;
+		idle-timeout-ms = <200>;
+	};
+
+    keys: keys {
+		compatible = "gpio-keys";
+		button0: button0 {
+			gpios = <&gpio1 28 (GPIO_ACTIVE_HIGH|GPIO_PULL_UP)>;
+			zephyr,code = <INPUT_KEY_R>;
+		};
+
+		encoder_button: encoder_button {
+			gpios = <&gpio1 29 (GPIO_ACTIVE_HIGH|GPIO_PULL_UP)>;
+			zephyr,code = <INPUT_KEY_0>;
+		};
+	};
+
+	lvgl_button_input {
+		compatible = "zephyr,lvgl-button-input";
+		input = <&keys>;
+		input-codes = <INPUT_KEY_R>;
+		coordinates = <160 120>;
+	};
+
+	lvgl_encoder_input {
+		compatible = "zephyr,lvgl-encoder-input";
+		rotation-input-code = <INPUT_REL_WHEEL>;
+		button-input-code = <INPUT_KEY_0>;
+	};
+
+};
+
+&lpspi4 {
+	pinctrl-0 = <&pinmux_lpspi4>;
+	pinctrl-names = "default";
+    status = "okay";
+    cs-gpios = <&gpio2 19 GPIO_ACTIVE_LOW>;
+
+    ssd1306_ssd1306_128x64_spi: ssd1306@0 {
+        compatible = "solomon,ssd1306fb";
+        reg = <0x0>;
+        spi-max-frequency = <50000>;
+        width = <128>;
+        height = <64>;
+        segment-offset = <0>;
+        page-offset = <0>;
+        display-offset = <0>;
+        multiplex-ratio = <63>;
+        segment-remap;
+        com-invdir;
+        //inversion-on;
+        prechargep = <0x22>;
+        data_cmd-gpios = <&gpio3 22 GPIO_ACTIVE_HIGH>;
+        reset-gpios = <&gpio3 23 GPIO_ACTIVE_LOW>;
+    };
+};
+
+
+&flexcan1 {
+	pinctrl-0 = <&pinmux_flexcan1>;
+	pinctrl-names = "default";
+	status = "disabled";
+};
+
+zephyr_udc0: &usb1 {
+	status = "okay";
+    cdc_acm_uart: cdc_acm_uart {
+        compatible = "zephyr,cdc-acm-uart";
+    };
+};

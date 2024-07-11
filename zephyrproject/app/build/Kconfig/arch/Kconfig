@@ -1,0 +1,11 @@
+# Load arch Kconfig descriptions.
+osource "/home/willow/Documents/Sensor-test/zephyrproject/zephyr/arch/x86/Kconfig"
+osource "/home/willow/Documents/Sensor-test/zephyrproject/zephyr/arch/xtensa/Kconfig"
+osource "/home/willow/Documents/Sensor-test/zephyrproject/zephyr/arch/sparc/Kconfig"
+osource "/home/willow/Documents/Sensor-test/zephyrproject/zephyr/arch/riscv/Kconfig"
+osource "/home/willow/Documents/Sensor-test/zephyrproject/zephyr/arch/posix/Kconfig"
+osource "/home/willow/Documents/Sensor-test/zephyrproject/zephyr/arch/nios2/Kconfig"
+osource "/home/willow/Documents/Sensor-test/zephyrproject/zephyr/arch/mips/Kconfig"
+osource "/home/willow/Documents/Sensor-test/zephyrproject/zephyr/arch/arm64/Kconfig"
+osource "/home/willow/Documents/Sensor-test/zephyrproject/zephyr/arch/arm/Kconfig"
+osource "/home/willow/Documents/Sensor-test/zephyrproject/zephyr/arch/arc/Kconfig"

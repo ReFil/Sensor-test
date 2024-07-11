@@ -1,0 +1,1 @@
+"mcuboot":"/home/willow/Documents/Sensor-test/zephyrproject/bootloader/mcuboot":"/home/willow/Documents/Sensor-test/zephyrproject/bootloader/mcuboot/boot/zephyr/sysbuild"

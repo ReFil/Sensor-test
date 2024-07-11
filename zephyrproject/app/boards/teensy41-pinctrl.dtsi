@@ -1,0 +1,16 @@
+#include <nxp/nxp_imx/rt/mimxrt1062dvl6a-pinctrl.dtsi>
+
+
+&pinctrl {
+    pinmux_lpspi4: pinmux_lpspi4 {
+        group0 {
+            pinmux = <&iomuxc_gpio_b1_02_lpspi4_pcs2>,
+                <&iomuxc_gpio_b0_03_lpspi4_sck>,
+                <&iomuxc_gpio_b0_01_lpspi4_sdi>,
+                <&iomuxc_gpio_b0_02_lpspi4_sdo>;
+            drive-strength = "r0-6";
+            slew-rate = "slow";
+            nxp,speed = "100-mhz";
+        };
+    };
+};
