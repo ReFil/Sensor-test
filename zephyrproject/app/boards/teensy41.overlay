@@ -14,7 +14,7 @@
 
     qdec {
 		compatible = "gpio-qdec";
-		gpios = <&gpio1 20 (GPIO_ACTIVE_HIGH|GPIO_PULL_UP)>, <&gpio1 21 (GPIO_ACTIVE_HIGH|GPIO_PULL_UP)>;
+		gpios = <&gpio1 20 (GPIO_ACTIVE_LOW|GPIO_PULL_UP)>, <&gpio1 21 (GPIO_ACTIVE_LOW|GPIO_PULL_UP)>;
 		steps-per-period = <4>;
 		zephyr,axis = <INPUT_REL_WHEEL>;
 		sample-time-us = <2000>;
@@ -24,13 +24,13 @@
     keys: keys {
 		compatible = "gpio-keys";
 		button0: button0 {
-			gpios = <&gpio1 28 (GPIO_ACTIVE_HIGH|GPIO_PULL_UP)>;
+			gpios = <&gpio1 28 (GPIO_ACTIVE_LOW|GPIO_PULL_UP)>;
 			zephyr,code = <INPUT_KEY_R>;
 		};
 
 		encoder_button: encoder_button {
-			gpios = <&gpio1 29 (GPIO_ACTIVE_HIGH|GPIO_PULL_UP)>;
-			zephyr,code = <INPUT_KEY_0>;
+			gpios = <&gpio1 29 (GPIO_ACTIVE_LOW|GPIO_PULL_UP)>;
+			zephyr,code = <INPUT_KEY_ENTER>;
 		};
 	};
 
@@ -44,7 +44,7 @@
 	lvgl_encoder_input {
 		compatible = "zephyr,lvgl-encoder-input";
 		rotation-input-code = <INPUT_REL_WHEEL>;
-		button-input-code = <INPUT_KEY_0>;
+		button-input-code = <INPUT_KEY_ENTER>;
 	};
 
 };

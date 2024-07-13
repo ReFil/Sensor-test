@@ -3074,7 +3074,7 @@
 	};
 	qdec {
 		compatible = "gpio-qdec";
-		gpios = < &gpio1 0x14 0x10 >, < &gpio1 0x15 0x10 >;
+		gpios = < &gpio1 0x14 0x11 >, < &gpio1 0x15 0x11 >;
 		steps-per-period = < 0x4 >;
 		zephyr,axis = < 0x8 >;
 		sample-time-us = < 0x7d0 >;
@@ -3084,11 +3084,11 @@
 		compatible = "gpio-keys";
 		phandle = < 0x160 >;
 		button0: button0 {
-			gpios = < &gpio1 0x1c 0x10 >;
+			gpios = < &gpio1 0x1c 0x11 >;
 			zephyr,code = < 0x13 >;
 		};
 		encoder_button: encoder_button {
-			gpios = < &gpio1 0x1d 0x10 >;
+			gpios = < &gpio1 0x1d 0x11 >;
 			zephyr,code = < 0xb >;
 		};
 	};

@@ -10308,7 +10308,7 @@ zephyr_udc0: &usb1 {
 
     qdec {
   compatible = "gpio-qdec";
-  gpios = <&gpio1 20 ((0 << 0)|(1 << 4))>, <&gpio1 21 ((0 << 0)|(1 << 4))>;
+  gpios = <&gpio1 20 ((1 << 0)|(1 << 4))>, <&gpio1 21 ((1 << 0)|(1 << 4))>;
   steps-per-period = <4>;
   zephyr,axis = <0x08>;
   sample-time-us = <2000>;
@@ -10318,12 +10318,12 @@ zephyr_udc0: &usb1 {
     keys: keys {
   compatible = "gpio-keys";
   button0: button0 {
-   gpios = <&gpio1 28 ((0 << 0)|(1 << 4))>;
+   gpios = <&gpio1 28 ((1 << 0)|(1 << 4))>;
    zephyr,code = <19>;
   };
 
   encoder_button: encoder_button {
-   gpios = <&gpio1 29 ((0 << 0)|(1 << 4))>;
+   gpios = <&gpio1 29 ((1 << 0)|(1 << 4))>;
    zephyr,code = <11>;
   };
  };

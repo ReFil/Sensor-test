@@ -27,16 +27,14 @@ LOG_MODULE_REGISTER(app, CONFIG_APP_LOG_LEVEL);
 
 static uint32_t count;
 
-static void value_changed_event_cb(lv_event_t * e)
+static void event_handler(lv_event_t * e)
 {
-   LOG_DBG("I WANT TO KRILL MYSLEF");
-   lv_obj_t * arc = lv_event_get_target(e);
-    lv_obj_t * label = lv_event_get_user_data(e);
+    lv_obj_t * obj = lv_event_get_target(e);
 
-    lv_label_set_text_fmt(label, "%" LV_PRId32 "%%", lv_arc_get_value(arc));
-
-    /*Rotate the label to the current position of the arc*/
-    lv_arc_rotate_obj_to_angle(arc, label, 25);
+        char buf[32];
+        lv_roller_get_selected_str(obj, buf, sizeof(buf));
+        LOG_DBG("Selected month: %s\n", buf);
+    
 }
 
 #ifdef CONFIG_GPIO
@@ -68,8 +66,6 @@ int main(void)
 
 	char count_str[11] = {0};
 	const struct device *display_dev;
-	lv_obj_t *hello_world_label;
-	lv_obj_t *count_label;
 
 	display_dev = DEVICE_DT_GET(DT_CHOSEN(zephyr_display));
 	if (!device_is_ready(display_dev)) {
@@ -105,36 +101,36 @@ int main(void)
 	}
 #endif /* CONFIG_GPIO */
 
-	lv_obj_t *arc;
-	lv_group_t *arc_group;
+	lv_group_t *roller_group;
 
 
-	arc = lv_arc_create(lv_scr_act());
-	lv_obj_align(arc, LV_ALIGN_CENTER, 0, -15);
-	lv_obj_set_size(arc, 30, 30);
-    lv_arc_set_rotation(arc, 135);
-    lv_arc_set_bg_angles(arc, 0, 270);
-    lv_arc_set_value(arc, count);
+    lv_obj_t * roller1 = lv_roller_create(lv_scr_act());
+    lv_roller_set_options(roller1,
+                          "January\n"
+                          "February\n"
+                          "March\n"
+                          "April\n"
+                          "May\n"
+                          "June\n"
+                          "July\n"
+                          "August\n"
+                          "September\n"
+                          "October\n"
+                          "November\n"
+                          "December",
+                          LV_ROLLER_MODE_INFINITE);
 
-    lv_style_t arc_style_INDICATOR;
-    lv_style_init(&arc_style_INDICATOR);
-    lv_style_set_arc_color(&arc_style_INDICATOR,lv_color_black());
-    lv_style_set_arc_width(&arc_style_INDICATOR, 4);
-    lv_obj_add_style(arc, &arc_style_INDICATOR, LV_PART_INDICATOR);
+    lv_roller_set_visible_row_count(roller1, 4);
+    lv_obj_center(roller1);
+    lv_obj_set_size(roller1, LV_HOR_RES-8, LV_VER_RES-8);
+    lv_roller_set_visible_row_count(roller1, 3);
+    lv_obj_add_event_cb(roller1, event_handler, LV_EVENT_ALL, NULL);
 
-    // Optionally set the arc to be centered in the parent
-    lv_obj_center(arc);
+	roller_group = lv_group_create();
+	lv_group_add_obj(roller_group, roller1);
+	lv_indev_set_group(lvgl_input_get_indev(lvgl_encoder), roller_group);
+    lv_group_set_editing(roller_group, true);
 
-
-	arc_group = lv_group_create();
-	lv_group_add_obj(arc_group, arc);
-	lv_indev_set_group(lvgl_input_get_indev(lvgl_encoder), arc_group);
-
-	hello_world_label = lv_label_create(lv_scr_act());
-
-
-	count_label = lv_label_create(lv_scr_act());
-	lv_obj_align(count_label, LV_ALIGN_BOTTOM_MID, 0, 0);
 
 	lv_task_handler();
 	display_blanking_off(display_dev);
@@ -142,8 +138,6 @@ int main(void)
 	while (1) {
 		if ((count % 100) == 0U) {
 			sprintf(count_str, "%d", count/100U);
-			lv_label_set_text(count_label, count_str);
-            lv_arc_set_value(arc, count/100);
             LOG_DBG("DOING THINGS");
 		}
 		lv_task_handler();
