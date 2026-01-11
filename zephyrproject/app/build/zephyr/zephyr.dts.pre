@@ -10299,19 +10299,23 @@ zephyr_udc0: &usb1 {
 / {
     aliases {
   sw0 = &button0;
+  sw1 = &button1;
+  sw2 = &button2;
+  sw3 = &button3;
  };
 
     chosen {
   zephyr,display = &ssd1306_ssd1306_128x64_spi;
         zephyr,console = &cdc_acm_uart;
+  app,rtc = &rtc;
  };
 
     qdec {
   compatible = "gpio-qdec";
-  gpios = <&gpio1 20 ((1 << 0)|(1 << 4))>, <&gpio1 21 ((1 << 0)|(1 << 4))>;
+  gpios = <&gpio1 21 ((1 << 0)|(1 << 4))>, <&gpio1 20 ((1 << 0)|(1 << 4))>;
   steps-per-period = <4>;
   zephyr,axis = <0x08>;
-  sample-time-us = <2000>;
+  sample-time-us = <1500>;
   idle-timeout-ms = <200>;
  };
 
@@ -10321,10 +10325,22 @@ zephyr_udc0: &usb1 {
    gpios = <&gpio1 28 ((1 << 0)|(1 << 4))>;
    zephyr,code = <19>;
   };
+  button1: button1 {
+   gpios = <&gpio2 26 ((1 << 0)|(1 << 4))>;
+   zephyr,code = <20>;
+  };
+  button2: button2 {
+   gpios = <&gpio2 12 ((1 << 0)|(1 << 4))>;
+   zephyr,code = <21>;
+  };
+  button3: button3 {
+   gpios = <&gpio4 7 ((1 << 0)|(1 << 4))>;
+   zephyr,code = <22>;
+  };
 
   encoder_button: encoder_button {
    gpios = <&gpio1 29 ((1 << 0)|(1 << 4))>;
-   zephyr,code = <11>;
+   zephyr,code = <28>;
   };
  };
 
@@ -10338,8 +10354,13 @@ zephyr_udc0: &usb1 {
  lvgl_encoder_input {
   compatible = "zephyr,lvgl-encoder-input";
   rotation-input-code = <0x08>;
-  button-input-code = <11>;
+  button-input-code = <28>;
  };
+
+ rtc: rtc {
+        status = "okay";
+        compatible = "zephyr,rtc-emul";
+    };
 
 };
 

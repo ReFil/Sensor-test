@@ -24,6 +24,7 @@
 /home/willow/Documents/Sensor-test/zephyrproject/modules/hal/telink/tlsr9/Kconfig
 /home/willow/Documents/Sensor-test/zephyrproject/modules/lib/gui/lvgl/Kconfig
 /home/willow/Documents/Sensor-test/zephyrproject/modules/lib/picolibc/zephyr/Kconfig
+/home/willow/Documents/Sensor-test/zephyrproject/zephyr/Kconfig.constants
 /home/willow/Documents/Sensor-test/zephyrproject/zephyr/Kconfig.zephyr
 /home/willow/Documents/Sensor-test/zephyrproject/zephyr/arch/Kconfig
 /home/willow/Documents/Sensor-test/zephyrproject/zephyr/arch/Kconfig.v2
@@ -443,6 +444,7 @@
 /home/willow/Documents/Sensor-test/zephyrproject/zephyr/drivers/entropy/Kconfig.esp32
 /home/willow/Documents/Sensor-test/zephyrproject/zephyr/drivers/entropy/Kconfig.gecko
 /home/willow/Documents/Sensor-test/zephyrproject/zephyr/drivers/entropy/Kconfig.litex
+/home/willow/Documents/Sensor-test/zephyrproject/zephyr/drivers/entropy/Kconfig.max32
 /home/willow/Documents/Sensor-test/zephyrproject/zephyr/drivers/entropy/Kconfig.mcux
 /home/willow/Documents/Sensor-test/zephyrproject/zephyr/drivers/entropy/Kconfig.native_posix
 /home/willow/Documents/Sensor-test/zephyrproject/zephyr/drivers/entropy/Kconfig.neorv32

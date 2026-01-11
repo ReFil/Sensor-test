@@ -207,6 +207,11 @@ DT_COMPAT_ADI_MAX32_SPI := adi,max32-spi
 config DT_HAS_ADI_MAX32_SPI_ENABLED
 	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADI_MAX32_SPI))
 
+DT_COMPAT_ADI_MAX32_TRNG := adi,max32-trng
+
+config DT_HAS_ADI_MAX32_TRNG_ENABLED
+	def_bool $(dt_compat_enabled,$(DT_COMPAT_ADI_MAX32_TRNG))
+
 DT_COMPAT_ADI_MAX32_UART := adi,max32-uart
 
 config DT_HAS_ADI_MAX32_UART_ENABLED

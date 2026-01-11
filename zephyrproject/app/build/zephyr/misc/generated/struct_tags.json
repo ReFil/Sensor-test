@@ -10,6 +10,7 @@
     ],
     "__subsystem": [
         "gpio_driver_api",
+        "rtc_driver_api",
         "uart_driver_api",
         "spi_driver_api",
         "shared_irq_driver_api",
@@ -63,7 +64,6 @@
         "regulator_driver_api",
         "reset_driver_api",
         "retained_mem_driver_api",
-        "rtc_driver_api",
         "sdhc_driver_api",
         "sensor_driver_api",
         "smbus_driver_api",

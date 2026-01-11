@@ -337,8 +337,9 @@ void loop() {
         // Save to file
         dateTime = String(year()) + "-" + String(month()) + "-" + String(day()) + " " +
                    String(hour()) + ":" + String(minute()) + ":" + String(second());
-        dataFile = SD.open(filename.c_str(), FILE_WRITE);
-        if (dataFile) // it opened OK
+        dataFile = SD.open(filename.c_str(), FILE_WRITE);#ifdef FIDAS
+            dataFile.print(String(fidasPM25) + ", ");
+#endif
         {
             Serial.println("Writing data to csv");
             dataFile.print(String(dateTime + ", "));

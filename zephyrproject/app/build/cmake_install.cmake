@@ -40,6 +40,7 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/willow/Documents/Sensor-test/zephyrproject/app/build/zephyr/cmake_install.cmake")
+  include("/home/willow/Documents/Sensor-test/zephyrproject/app/build/src/ui/cmake_install.cmake")
 
 endif()
 

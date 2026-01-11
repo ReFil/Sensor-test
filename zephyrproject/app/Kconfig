@@ -8,18 +8,18 @@ source "subsys/logging/Kconfig.template.log_config"
 
 menu "Logging"
 
-config ZMK_LOGGING_MINIMAL
-    bool "Suppress all ZMK debug log messages"
+config APP_LOGGING_MINIMAL
+    bool "Suppress all APP debug log messages"
     default false
 
-if !ZMK_LOGGING_MINIMAL
+if !APP_LOGGING_MINIMAL
 
 config APP_LOG_LEVEL
     default 4
 
 endif
 
-config ZMK_USB_LOGGING
+config APP_USB_LOGGING
     bool "Enable USB CDC ACM logging to help debug"
     select LOG
     select USB_DEVICE_STACK
@@ -30,7 +30,7 @@ config ZMK_USB_LOGGING
     select UART_LINE_CTRL
     select UART_CONSOLE
 
-if ZMK_USB_LOGGING
+if APP_USB_LOGGING
 
 choice USB_CDC_ACM_LOG_LEVEL_CHOICE
     default USB_CDC_ACM_LOG_LEVEL_OFF
@@ -48,10 +48,10 @@ config USB_CDC_ACM_RINGBUF_SIZE
 config LOG_PROCESS_THREAD_STARTUP_DELAY_MS
     default 1000
 
-#ZMK_USB_LOGGING
+#APP_USB_LOGGING
 endif
 
-config ZMK_RTT_LOGGING
+config APP_RTT_LOGGING
     bool "Enable RTT logging to help debug"
     select LOG
     select DEBUG
@@ -60,15 +60,15 @@ config ZMK_RTT_LOGGING
     select CONSOLE
     select RTT_CONSOLE
 
-if ZMK_RTT_LOGGING
+if APP_RTT_LOGGING
 
 config SEGGER_RTT_BUFFER_SIZE_UP
     default 8192
 
-#ZMK_RTT_LOGGING
+#APP_RTT_LOGGING
 endif
 
-if ZMK_USB_LOGGING || ZMK_RTT_LOGGING
+if APP_USB_LOGGING || APP_RTT_LOGGING
 
 config LOG_BUFFER_SIZE
     default 8192
@@ -76,8 +76,31 @@ config LOG_BUFFER_SIZE
 config LOG_PROCESS_THREAD_SLEEP_MS
     default 100
 
-#ZMK_USB_LOGGING || ZMK_RTT_LOGGING
+#APP_USB_LOGGING || APP_RTT_LOGGING
 endif
 
 #Logging
 endmenu
+
+choice APP_DISPLAY_WORK_QUEUE
+    prompt "Work queue selection for UI updates"
+
+config APP_DISPLAY_WORK_QUEUE_SYSTEM
+    bool "Use default system work queue for UI updates"
+
+config APP_DISPLAY_WORK_QUEUE_DEDICATED
+    bool "Use dedicated work queue for UI updates"
+
+endchoice
+
+if APP_DISPLAY_WORK_QUEUE_DEDICATED
+
+config APP_DISPLAY_DEDICATED_THREAD_STACK_SIZE
+    int "Stack size for dedicated UI thread/queue"
+    default 16384
+
+config APP_DISPLAY_DEDICATED_THREAD_PRIORITY
+    int "Thread priority for dedicated UI thread/queue"
+    default 5
+
+endif # APP_DISPLAY_WORK_QUEUE_DEDICATED

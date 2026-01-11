@@ -5,19 +5,23 @@
 / {
     aliases {
 		sw0 = &button0;
+		sw1 = &button1;
+		sw2 = &button2;
+		sw3 = &button3;
 	};
     
     chosen {
 		zephyr,display = &ssd1306_ssd1306_128x64_spi;
         zephyr,console = &cdc_acm_uart;
+		app,rtc = &rtc;
 	};
 
     qdec {
 		compatible = "gpio-qdec";
-		gpios = <&gpio1 20 (GPIO_ACTIVE_LOW|GPIO_PULL_UP)>, <&gpio1 21 (GPIO_ACTIVE_LOW|GPIO_PULL_UP)>;
+		gpios = <&gpio1 21 (GPIO_ACTIVE_LOW|GPIO_PULL_UP)>, <&gpio1 20 (GPIO_ACTIVE_LOW|GPIO_PULL_UP)>;
 		steps-per-period = <4>;
 		zephyr,axis = <INPUT_REL_WHEEL>;
-		sample-time-us = <2000>;
+		sample-time-us = <1500>;
 		idle-timeout-ms = <200>;
 	};
 
@@ -26,6 +30,18 @@
 		button0: button0 {
 			gpios = <&gpio1 28 (GPIO_ACTIVE_LOW|GPIO_PULL_UP)>;
 			zephyr,code = <INPUT_KEY_R>;
+		};
+		button1: button1 {
+			gpios = <&gpio2 26 (GPIO_ACTIVE_LOW|GPIO_PULL_UP)>;
+			zephyr,code = <INPUT_KEY_T>;
+		};
+		button2: button2 {
+			gpios = <&gpio2 12 (GPIO_ACTIVE_LOW|GPIO_PULL_UP)>;
+			zephyr,code = <INPUT_KEY_Y>;
+		};
+		button3: button3 {
+			gpios = <&gpio4 7 (GPIO_ACTIVE_LOW|GPIO_PULL_UP)>;
+			zephyr,code = <INPUT_KEY_U>;
 		};
 
 		encoder_button: encoder_button {
@@ -46,6 +62,11 @@
 		rotation-input-code = <INPUT_REL_WHEEL>;
 		button-input-code = <INPUT_KEY_ENTER>;
 	};
+
+	rtc: rtc {
+        status = "okay";
+        compatible = "zephyr,rtc-emul";
+    };
 
 };
 

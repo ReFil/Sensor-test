@@ -194,6 +194,9 @@
 /home/willow/Documents/Sensor-test/zephyrproject/app/build/zephyr/drivers/pinctrl/CMakeFiles/rebuild_cache.dir
 /home/willow/Documents/Sensor-test/zephyrproject/app/build/zephyr/drivers/pinctrl/renesas/CMakeFiles/edit_cache.dir
 /home/willow/Documents/Sensor-test/zephyrproject/app/build/zephyr/drivers/pinctrl/renesas/CMakeFiles/rebuild_cache.dir
+/home/willow/Documents/Sensor-test/zephyrproject/app/build/zephyr/drivers/rtc/CMakeFiles/drivers__rtc.dir
+/home/willow/Documents/Sensor-test/zephyrproject/app/build/zephyr/drivers/rtc/CMakeFiles/edit_cache.dir
+/home/willow/Documents/Sensor-test/zephyrproject/app/build/zephyr/drivers/rtc/CMakeFiles/rebuild_cache.dir
 /home/willow/Documents/Sensor-test/zephyrproject/app/build/zephyr/drivers/serial/CMakeFiles/drivers__serial.dir
 /home/willow/Documents/Sensor-test/zephyrproject/app/build/zephyr/drivers/serial/CMakeFiles/edit_cache.dir
 /home/willow/Documents/Sensor-test/zephyrproject/app/build/zephyr/drivers/serial/CMakeFiles/rebuild_cache.dir
@@ -354,3 +357,5 @@
 /home/willow/Documents/Sensor-test/zephyrproject/app/build/zephyr/cmake/reports/CMakeFiles/footprint.dir
 /home/willow/Documents/Sensor-test/zephyrproject/app/build/zephyr/cmake/reports/CMakeFiles/edit_cache.dir
 /home/willow/Documents/Sensor-test/zephyrproject/app/build/zephyr/cmake/reports/CMakeFiles/rebuild_cache.dir
+/home/willow/Documents/Sensor-test/zephyrproject/app/build/src/ui/CMakeFiles/edit_cache.dir
+/home/willow/Documents/Sensor-test/zephyrproject/app/build/src/ui/CMakeFiles/rebuild_cache.dir

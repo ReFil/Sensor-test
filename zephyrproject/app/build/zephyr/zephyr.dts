@@ -17,10 +17,14 @@
 		zephyr,shell-uart = &lpuart6;
 		zephyr,canbus = &flexcan1;
 		zephyr,display = &ssd1306_ssd1306_128x64_spi;
+		app,rtc = &rtc;
 	};
 	aliases {
 		led0 = &board_led;
 		sw0 = &button0;
+		sw1 = &button1;
+		sw2 = &button2;
+		sw3 = &button3;
 	};
 	soc {
 		#address-cells = < 0x1 >;
@@ -297,6 +301,7 @@
 			gpio-controller;
 			#gpio-cells = < 0x2 >;
 			pinmux = < &iomuxc_gpio_emc_00_gpio4_io00 >, < &iomuxc_gpio_emc_01_gpio4_io01 >, < &iomuxc_gpio_emc_02_gpio4_io02 >, < &iomuxc_gpio_emc_03_gpio4_io03 >, < &iomuxc_gpio_emc_04_gpio4_io04 >, < &iomuxc_gpio_emc_05_gpio4_io05 >, < &iomuxc_gpio_emc_06_gpio4_io06 >, < &iomuxc_gpio_emc_07_gpio4_io07 >, < &iomuxc_gpio_emc_08_gpio4_io08 >, < &iomuxc_gpio_emc_09_gpio4_io09 >, < &iomuxc_gpio_emc_10_gpio4_io10 >, < &iomuxc_gpio_emc_11_gpio4_io11 >, < &iomuxc_gpio_emc_12_gpio4_io12 >, < &iomuxc_gpio_emc_13_gpio4_io13 >, < &iomuxc_gpio_emc_14_gpio4_io14 >, < &iomuxc_gpio_emc_15_gpio4_io15 >, < &iomuxc_gpio_emc_16_gpio4_io16 >, < &iomuxc_gpio_emc_17_gpio4_io17 >, < &iomuxc_gpio_emc_18_gpio4_io18 >, < &iomuxc_gpio_emc_19_gpio4_io19 >, < &iomuxc_gpio_emc_20_gpio4_io20 >, < &iomuxc_gpio_emc_21_gpio4_io21 >, < &iomuxc_gpio_emc_22_gpio4_io22 >, < &iomuxc_gpio_emc_23_gpio4_io23 >, < &iomuxc_gpio_emc_24_gpio4_io24 >, < &iomuxc_gpio_emc_25_gpio4_io25 >, < &iomuxc_gpio_emc_26_gpio4_io26 >, < &iomuxc_gpio_emc_27_gpio4_io27 >, < &iomuxc_gpio_emc_28_gpio4_io28 >, < &iomuxc_gpio_emc_29_gpio4_io29 >, < &iomuxc_gpio_emc_30_gpio4_io30 >, < &iomuxc_gpio_emc_31_gpio4_io31 >;
+			phandle = < 0x160 >;
 		};
 		gpio5: gpio@400c0000 {
 			compatible = "nxp,imx-gpio";
@@ -3074,22 +3079,34 @@
 	};
 	qdec {
 		compatible = "gpio-qdec";
-		gpios = < &gpio1 0x14 0x11 >, < &gpio1 0x15 0x11 >;
+		gpios = < &gpio1 0x15 0x11 >, < &gpio1 0x14 0x11 >;
 		steps-per-period = < 0x4 >;
 		zephyr,axis = < 0x8 >;
-		sample-time-us = < 0x7d0 >;
+		sample-time-us = < 0x5dc >;
 		idle-timeout-ms = < 0xc8 >;
 	};
 	keys: keys {
 		compatible = "gpio-keys";
-		phandle = < 0x160 >;
+		phandle = < 0x161 >;
 		button0: button0 {
 			gpios = < &gpio1 0x1c 0x11 >;
 			zephyr,code = < 0x13 >;
 		};
+		button1: button1 {
+			gpios = < &gpio2 0x1a 0x11 >;
+			zephyr,code = < 0x14 >;
+		};
+		button2: button2 {
+			gpios = < &gpio2 0xc 0x11 >;
+			zephyr,code = < 0x15 >;
+		};
+		button3: button3 {
+			gpios = < &gpio4 0x7 0x11 >;
+			zephyr,code = < 0x16 >;
+		};
 		encoder_button: encoder_button {
 			gpios = < &gpio1 0x1d 0x11 >;
-			zephyr,code = < 0xb >;
+			zephyr,code = < 0x1c >;
 		};
 	};
 	lvgl_button_input {
@@ -3101,6 +3118,10 @@
 	lvgl_encoder_input {
 		compatible = "zephyr,lvgl-encoder-input";
 		rotation-input-code = < 0x8 >;
-		button-input-code = < 0xb >;
+		button-input-code = < 0x1c >;
+	};
+	rtc: rtc {
+		status = "okay";
+		compatible = "zephyr,rtc-emul";
 	};
 };

@@ -1,0 +1,567 @@
+Connected.
+SD card is present & ready
+Writing headers to csv
+Headers written
+initialising
+MEasurement Triggered
+New battery val: 1.58Error trying to execute startMeasurement(): Received NACK on transmit of address
+0
+Sampling sensor
+0
+SEN55 PM2.5: 
+SEN55 Teemp: 
+SEN55 RH: 
+Irradiance from reference cell340
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 4.740
+Sampling sensor
+0
+SEN55 PM2.5: 5.70
+SEN55 Teemp: 21.40
+SEN55 RH: 68.49
+Irradiance from reference cell342
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.59New battery val: 3.59476 Old battery: 0.000 Sample rate: 29
+Battery voltage higher than expected, increasing sample rate by 1 SPH: 30
+0
+Sampling sensor
+0
+SEN55 PM2.5: 5.60
+SEN55 Teemp: 21.92
+SEN55 RH: 66.70
+Irradiance from reference cell324
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.560
+Sampling sensor
+0
+SEN55 PM2.5: 4.90
+SEN55 Teemp: 22.08
+SEN55 RH: 65.77
+Irradiance from reference cell298
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.540
+Sampling sensor
+0
+SEN55 PM2.5: 5.00
+SEN55 Teemp: 22.30
+SEN55 RH: 64.88
+Irradiance from reference cell295
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.53New battery val: 3.52467 Old battery: 3.59476 Sample rate: 30
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 29
+0
+Sampling sensor
+0
+SEN55 PM2.5: 5.50
+SEN55 Teemp: 22.43
+SEN55 RH: 64.39
+Irradiance from reference cell284
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.520
+Sampling sensor
+0
+SEN55 PM2.5: 5.30
+SEN55 Teemp: 22.47
+SEN55 RH: 64.03
+Irradiance from reference cell277
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.500
+Sampling sensor
+0
+SEN55 PM2.5: 5.20
+SEN55 Teemp: 22.59
+SEN55 RH: 63.74
+Irradiance from reference cell283
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.48New battery val: 3.47461 Old battery: 3.52467 Sample rate: 29
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 28
+0
+Sampling sensor
+0
+SEN55 PM2.5: 4.70
+SEN55 Teemp: 22.68
+SEN55 RH: 63.35
+Irradiance from reference cell294
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.440
+Sampling sensor
+0
+SEN55 PM2.5: 5.90
+SEN55 Teemp: 22.89
+SEN55 RH: 62.45
+Irradiance from reference cell314
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.420
+Sampling sensor
+0
+SEN55 PM2.5: 5.20
+SEN55 Teemp: 22.94
+SEN55 RH: 62.16
+Irradiance from reference cell327
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.42New battery val: 3.42454 Old battery: 3.47461 Sample rate: 28
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 27
+0
+Sampling sensor
+0
+SEN55 PM2.5: 4.80
+SEN55 Teemp: 23.16
+SEN55 RH: 62.09
+Irradiance from reference cell344
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.410
+Sampling sensor
+0
+SEN55 PM2.5: 5.10
+SEN55 Teemp: 23.26
+SEN55 RH: 61.77
+Irradiance from reference cell364
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.400
+Sampling sensor
+0
+SEN55 PM2.5: 4.40
+SEN55 Teemp: 23.42
+SEN55 RH: 61.21
+Irradiance from reference cell367
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.37New battery val: 3.37447 Old battery: 3.42454 Sample rate: 27
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 26
+0
+Sampling sensor
+0
+SEN55 PM2.5: 4.30
+SEN55 Teemp: 23.42
+SEN55 RH: 61.02
+Irradiance from reference cell360
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.340
+Sampling sensor
+0
+SEN55 PM2.5: 4.90
+SEN55 Teemp: 23.63
+SEN55 RH: 60.60
+Irradiance from reference cell373
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.330
+Sampling sensor
+0
+SEN55 PM2.5: 4.30
+SEN55 Teemp: 23.83
+SEN55 RH: 60.12
+Irradiance from reference cell371
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.32New battery val: 3.32440 Old battery: 3.37447 Sample rate: 26
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 25
+0
+Sampling sensor
+0
+SEN55 PM2.5: 3.80
+SEN55 Teemp: 23.74
+SEN55 RH: 60.26
+Irradiance from reference cell337
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.320
+Sampling sensor
+0
+SEN55 PM2.5: 4.10
+SEN55 Teemp: 23.80
+SEN55 RH: 60.10
+Irradiance from reference cell308
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.280
+Sampling sensor
+0
+SEN55 PM2.5: 4.60
+SEN55 Teemp: 23.69
+SEN55 RH: 60.30
+Irradiance from reference cell284
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.27New battery val: 3.26432 Old battery: 3.32440 Sample rate: 25
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 24
+0
+Sampling sensor
+0
+SEN55 PM2.5: 4.80
+SEN55 Teemp: 23.62
+SEN55 RH: 60.50
+Irradiance from reference cell228
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.230
+Sampling sensor
+0
+SEN55 PM2.5: 4.50
+SEN55 Teemp: 23.47
+SEN55 RH: 60.62
+Irradiance from reference cell181
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.230
+Sampling sensor
+0
+SEN55 PM2.5: 4.30
+SEN55 Teemp: 23.40
+SEN55 RH: 60.95
+Irradiance from reference cell156
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.20New battery val: 3.20424 Old battery: 3.26432 Sample rate: 24
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 23
+0
+Sampling sensor
+0
+SEN55 PM2.5: 3.90
+SEN55 Teemp: 23.22
+SEN55 RH: 61.03
+Irradiance from reference cell135
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.170
+Sampling sensor
+0
+SEN55 PM2.5: 4.80
+SEN55 Teemp: 23.12
+SEN55 RH: 61.42
+Irradiance from reference cell128
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.140
+Sampling sensor
+0
+SEN55 PM2.5: 4.10
+SEN55 Teemp: 23.00
+SEN55 RH: 61.62
+Irradiance from reference cell133
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.14New battery val: 3.14417 Old battery: 3.20424 Sample rate: 23
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 22
+0
+Sampling sensor
+0
+SEN55 PM2.5: 4.50
+SEN55 Teemp: 22.93
+SEN55 RH: 61.97
+Irradiance from reference cell128
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.110
+Sampling sensor
+0
+SEN55 PM2.5: 4.30
+SEN55 Teemp: 22.84
+SEN55 RH: 62.35
+Irradiance from reference cell124
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.090
+Sampling sensor
+0
+SEN55 PM2.5: 3.80
+SEN55 Teemp: 22.77
+SEN55 RH: 62.60
+Irradiance from reference cell137
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.08New battery val: 3.09410 Old battery: 3.14417 Sample rate: 22
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 21
+0
+Sampling sensor
+0
+SEN55 PM2.5: 3.70
+SEN55 Teemp: 22.74
+SEN55 RH: 62.61
+Irradiance from reference cell156
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.070
+Sampling sensor
+0
+SEN55 PM2.5: 4.40
+SEN55 Teemp: 22.70
+SEN55 RH: 62.98
+Irradiance from reference cell149
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.040
+Sampling sensor
+0
+SEN55 PM2.5: 3.40
+SEN55 Teemp: 22.65
+SEN55 RH: 63.09
+Irradiance from reference cell124
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 3.01New battery val: 3.01399 Old battery: 3.09410 Sample rate: 21
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 20
+0
+Sampling sensor
+0
+SEN55 PM2.5: 3.60
+SEN55 Teemp: 22.56
+SEN55 RH: 63.42
+Irradiance from reference cell107
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.990
+Sampling sensor
+0
+SEN55 PM2.5: 3.90
+SEN55 Teemp: 22.49
+SEN55 RH: 63.61
+Irradiance from reference cell103
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.980
+Sampling sensor
+0
+SEN55 PM2.5: 4.10
+SEN55 Teemp: 22.41
+SEN55 RH: 63.83
+Irradiance from reference cell103
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.95New battery val: 2.95392 Old battery: 3.01399 Sample rate: 20
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 19
+0
+Sampling sensor
+0
+SEN55 PM2.5: 4.20
+SEN55 Teemp: 22.33
+SEN55 RH: 64.14
+Irradiance from reference cell105
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.950
+Sampling sensor
+0
+SEN55 PM2.5: 4.30
+SEN55 Teemp: 22.26
+SEN55 RH: 64.46
+Irradiance from reference cell98
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.910
+Sampling sensor
+0
+SEN55 PM2.5: 4.00
+SEN55 Teemp: 22.16
+SEN55 RH: 64.68
+Irradiance from reference cell90
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.88New battery val: 2.89383 Old battery: 2.95392 Sample rate: 19
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 18
+0
+Sampling sensor
+0
+SEN55 PM2.5: 3.50
+SEN55 Teemp: 22.09
+SEN55 RH: 64.89
+Irradiance from reference cell90
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.860
+Sampling sensor
+0
+SEN55 PM2.5: 3.70
+SEN55 Teemp: 22.04
+SEN55 RH: 65.11
+Irradiance from reference cell100
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.850
+Sampling sensor
+0
+SEN55 PM2.5: 4.50
+SEN55 Teemp: 22.00
+SEN55 RH: 65.36
+Irradiance from reference cell110
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.83New battery val: 2.83375 Old battery: 2.89383 Sample rate: 18
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 17
+0
+Sampling sensor
+0
+SEN55 PM2.5: 4.40
+SEN55 Teemp: 21.97
+SEN55 RH: 65.54
+Irradiance from reference cell112
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.800
+Sampling sensor
+0
+SEN55 PM2.5: 4.20
+SEN55 Teemp: 21.94
+SEN55 RH: 65.70
+Irradiance from reference cell127
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.770
+Sampling sensor
+0
+SEN55 PM2.5: 4.40
+SEN55 Teemp: 21.92
+SEN55 RH: 65.67
+Irradiance from reference cell125
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.74New battery val: 2.74363 Old battery: 2.83375 Sample rate: 17
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 16
+0
+Sampling sensor
+0
+SEN55 PM2.5: 4.20
+SEN55 Teemp: 21.92
+SEN55 RH: 65.60
+Irradiance from reference cell133
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.730
+Sampling sensor
+0
+SEN55 PM2.5: 4.20
+SEN55 Teemp: 21.88
+SEN55 RH: 65.84
+Irradiance from reference cell135
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.700
+Sampling sensor
+0
+SEN55 PM2.5: 4.10
+SEN55 Teemp: 21.84
+SEN55 RH: 65.93
+Irradiance from reference cell119
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.66New battery val: 2.67354 Old battery: 2.74363 Sample rate: 16
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 15
+0
+Sampling sensor
+0
+SEN55 PM2.5: 4.30
+SEN55 Teemp: 21.80
+SEN55 RH: 66.48
+Irradiance from reference cell106
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.630
+Sampling sensor
+0
+SEN55 PM2.5: 3.60
+SEN55 Teemp: 21.70
+SEN55 RH: 67.14
+Irradiance from reference cell77
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.610
+Sampling sensor
+0
+SEN55 PM2.5: 4.40
+SEN55 Teemp: 21.66
+SEN55 RH: 67.75
+Irradiance from reference cell91
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.57New battery val: 2.57341 Old battery: 2.67354 Sample rate: 15
+Battery voltage lower than expected, decreasing sample rate by 1 SPH: 14
+0
+Sampling sensor
+0
+Error trying to execute readMeasuredValues(): Received NACK on transmit of address
+SEN55 PM2.5: 4.40
+SEN55 Teemp: 21.66
+SEN55 RH: 67.75
+Irradiance from reference cell81
+Writing data to csv
+data written
+MEasurement Triggered
+New battery val: 2.53Error trying to execute deviceReset(): Received NACK on transmit of address
+Error trying to execute startMeasurement(): Received NACK on transmit of address
+0
+Sampling sensor
+0
+Error trying to execute readMeasuredValues(): Received NACK on transmit of address
+SEN55 PM2.5: 0.00
+SEN55 Teemp: 0.00
+SEN55 RH: 67.75
+Irradiance from reference cell63
+Writing data to csv
+data written
+cu: Got hangup signal
+
+Disconnected.

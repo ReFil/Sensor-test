@@ -8,4 +8,7 @@ find_package(Zephyr REQUIRED HINTS ../zephyr)
 project(app)
 
 target_include_directories(app PRIVATE include)
+
 target_sources(app PRIVATE src/main.c)
+target_sources(app PRIVATE src/ui.c)
+add_subdirectory(src/ui/)
